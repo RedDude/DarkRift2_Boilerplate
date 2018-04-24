@@ -242,7 +242,7 @@ namespace Rooms
                     {
                         using (var reader = message.GetReader())
                         {
-                            var leftId = reader.ReadUInt32();
+                            var leftId = reader.ReadUInt16();
                             var newHostId = reader.ReadUInt32();
                             var leaverName = reader.ReadString();
                             ChatManager.ServerMessage(leaverName + " left the room.", MessageType.Room);
